@@ -54,6 +54,10 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
+	  <None Remove="Resources\Images\grid.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\list.png" />
+	  <None Remove="Resources\Images\phone_call.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +75,15 @@
 	  <Folder Include="Data\" />
 	  <Folder Include="Controls\" />
 	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\ManageMenuItemsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\OrdersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

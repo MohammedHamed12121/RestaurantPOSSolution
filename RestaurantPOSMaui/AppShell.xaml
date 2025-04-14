@@ -4,12 +4,39 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:RestaurantPOSMaui"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Locked"
+    Shell.FlyoutBackgroundColor="WhiteSmoke"
+    Shell.FlyoutWidth="60"
+    xmlns:Pages="clr-namespace:RestaurantPOSMaui.Pages"
     Title="RestaurantPOSMaui">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate Pages:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="ManageMenuItems"
+        Icon="list.png"
+        ContentTemplate="{DataTemplate Pages:ManageMenuItemsPage}"
+        Route="ManageMenuItemsPage" />
+
+    <ShellContent
+        Title="Orders"
+        Icon="grid.png"
+        ContentTemplate="{DataTemplate Pages:OrdersPage}"
+        Route="OrdersPage" />
+
+    <Shell.FlyoutFooter>
+        <Image 
+            Margin="0,0,0,25"
+            Aspect="AspectFit"
+            HeightRequest="20"
+            HorizontalOptions="Center"
+            Source="phone_call.png"
+            WidthRequest="20"
+            />
+    </Shell.FlyoutFooter>
 
 </Shell>
