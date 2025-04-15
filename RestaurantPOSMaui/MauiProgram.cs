@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using RestaurantPOSMaui.Data;
 
 namespace RestaurantPOSMaui
 {
@@ -20,6 +21,9 @@ namespace RestaurantPOSMaui
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            // Services
+            builder.Services.AddSingleton<DatabaseServices>();
 
             return builder.Build();
         }
